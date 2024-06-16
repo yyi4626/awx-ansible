@@ -1,7 +1,6 @@
 ---
 - name: configure the master redis server
   hosts: redis-master
-  become: yes
   tasks:
     - name: Install master node Redis
       vars:
@@ -13,7 +12,6 @@
         name: DavidWittman.redis
 - name: configure redis slaves
   hosts: redis-slave
-  become: yes
     tasks:
     - name: Install slave node Redis
       vars:
