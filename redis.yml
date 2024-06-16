@@ -10,4 +10,4 @@
         redis_socket: /var/run/redis/redis.sock
         redis_password: redispwd
       include_role: 
-        name: davidwittman.redis
+        name: DavidWittman.redis
