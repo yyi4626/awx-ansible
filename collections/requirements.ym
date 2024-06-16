@@ -3,3 +3,4 @@ collections:
 # Install the davidwittman.redis
 - davidwittman.redis
   source: https://galaxy.ansible.com
+- community.general
