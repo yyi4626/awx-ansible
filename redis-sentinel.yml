@@ -1,10 +1,13 @@
-- name: configure redis sentinel nodes
-  hosts: redis-sentinel
-  vars:
-    - redis_sentinel_monitors:
-      - name: redis1
-        host: 192.168.70.11
-        port: 6379
-        version: 7.2.0
-  roles:
-    - DavidWittman.redis
+---
+- hosts: redis-sentinel
+  become: yes
+  tasks:
+    - name: configure redis sentinel nodes
+      vars:
+        - redis_sentinel_monitors:
+          - name: redis1
+            host: 192.168.70.11
+            port: 6379
+            version: 7.2.0
+      roles:
+        - DavidWittman.redis
