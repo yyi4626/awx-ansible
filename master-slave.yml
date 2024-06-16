@@ -12,7 +12,7 @@
         name: DavidWittman.redis
 - name: configure redis slaves
   hosts: redis-slave
-    tasks:
+  tasks:
     - name: Install slave node Redis
       vars:
         redis_version: 5.0.10
