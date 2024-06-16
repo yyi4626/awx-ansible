@@ -1,4 +1,4 @@
 ---
 - src: DavidWittman.redis
-- src: community.general.zypper
+- src: community.general
 
