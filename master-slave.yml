@@ -24,4 +24,4 @@
   vars:
     - redis_slaveof: redis1 6479
   roles:
-    - davidwittman.redis
+    - DavidWittman.redis
