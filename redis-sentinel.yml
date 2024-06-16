@@ -1,0 +1,12 @@
+---
+- hosts: redis-sentinel
+  become: yes
+  tasks:
+    - name: Install sentinell on Redis nodes
+      vars:
+        - redis_sentinel_monitors:
+          - name: redis1
+            host: 192.168.70.11
+            port: 6379
+      include_role: 
+        name: DavidWittman.redis
