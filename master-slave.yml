@@ -1,0 +1,29 @@
+---
+- name: configure the master redis server
+  hosts: redis-master
+  become: yes
+  tasks:
+    - name: Install master node Redis
+      vars:
+        redis_version: 5.0.10
+        redis_port: 6479
+        redis_socket: /var/run/redis/redis.sock
+        redis_password: redispwd
+      include_role: 
+        name: DavidWittman.redis
+- name: configure redis slaves
+  hosts: redis-slave
+  become: yes
+    tasks:
+    - name: Install slave node Redis
+      vars:
+        redis_version: 5.0.10
+        redis_port: 6479
+        redis_socket: /var/run/redis/redis.sock
+        redis_password: redispwd
+      include_role: 
+        name: DavidWittman.redis
+  vars:
+    - redis_slaveof: redis1 6479
+  roles:
+    - davidwittman.redis
