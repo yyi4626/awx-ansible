@@ -1,4 +1,2 @@
 ---
-collections:
-# Install the davidwittman.redis
-- davidwittman.redis
+- src: DavidWittman.redis
