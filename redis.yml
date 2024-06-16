@@ -3,4 +3,4 @@
   vars:
     - redis_bind: 192.168.70.11
   roles:
-    - davidwittman.redis
+    - DavidWittman.redis
