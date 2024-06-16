@@ -12,5 +12,5 @@
       include_role: 
         name: DavidWittman.redis
   vars:
-    - redis_slaveof: redis1 6379
+    - redis_slaveof: 192.168.70.11 6379
 
