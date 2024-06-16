@@ -25,3 +25,4 @@
     - redis_slaveof: redis1 6479
   roles:
     - DavidWittman.redis
+
