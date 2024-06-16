@@ -1,0 +1,16 @@
+---
+- hosts: redis-slave
+  become: yes
+  tasks:
+    - name: Install single node Redis
+      vars:
+        redis_version: 7.2.0
+        redis_port: 6379
+        redis_bind: 0.0.0.0
+        redis_socket: /var/run/redis/redis.sock
+        redis_password: redispwd
+      include_role: 
+        name: DavidWittman.redis
+  vars:
+    - redis_slaveof: redis1 6379
+
